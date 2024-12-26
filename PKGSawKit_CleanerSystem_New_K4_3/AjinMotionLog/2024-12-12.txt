@@ -1,0 +1,4 @@
+[2024-12-12, 09:46:25] Axl library initialization completed
+[2024-12-12, 09:46:25] No axis was searched
+[2024-12-12, 09:46:25] Ajin motion driver initialization fail
+[2024-12-12, 09:46:25] Ajin motion driver close

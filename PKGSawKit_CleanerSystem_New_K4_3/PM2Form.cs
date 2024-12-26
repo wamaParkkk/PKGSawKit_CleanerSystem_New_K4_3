@@ -1,5 +1,6 @@
 ﻿using Ajin_motion_driver;
 using MsSqlManagerLibrary;
+using PKGSawKit_CleanerSystem_New_K4_3.SerialComm;
 using System;
 using System.Drawing;
 using System.IO;
@@ -19,6 +20,9 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
 
         RecipeSelectForm recipeSelectForm;
         DigitalDlg digitalDlg;
+        AnalogDlg analogDlg;
+
+        HanyoungNuxClass heater_ctrl;
 
         private Timer logdisplayTimer = new Timer();
 
@@ -425,10 +429,11 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
                 }
             }
 
+            textBoxCurrentWaterTemp.Text = Define.temp_PV.ToString();
+
 
             // Daily count
             textBoxDailyCnt.Text = Define.iPM2DailyCnt.ToString("00");
-
         }
 
         private void Eventlog_Display(object sender, ElapsedEventArgs e)
@@ -545,6 +550,30 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             catch (IOException)
             {
 
+            }
+        }
+
+        private void Analog_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                analogDlg = new AnalogDlg();
+                heater_ctrl = new HanyoungNuxClass();
+
+                if (analogDlg.ShowDialog() == DialogResult.OK)
+                {
+                    string strVal = analogDlg.m_strResult;
+                    bool bResult = double.TryParse(strVal, out double dVal);
+                    if (bResult)
+                    {
+                        heater_ctrl.set_Temp(dVal);
+                        textBoxSettingWaterTemp.Text = dVal.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

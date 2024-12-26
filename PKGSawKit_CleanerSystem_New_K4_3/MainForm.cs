@@ -34,6 +34,8 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         Squence.PM2Process pM2Process;
         Squence.PM2Cylinder pM2Cylinder;
 
+        SerialComm.HanyoungNuxClass heater_ctrl;
+
         bool bLogCnt;
 
         public MainForm()
@@ -77,6 +79,9 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
 
             // Motion driver init
             MotionClass.Ajin_Motion_Init();
+
+            // Heater controller
+            heater_ctrl.HanyoungNux_Init();
 
             Global.Init();
 
@@ -170,6 +175,8 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
 
             pM2Process = new Squence.PM2Process();
             pM2Cylinder = new Squence.PM2Cylinder();
+
+            heater_ctrl = new SerialComm.HanyoungNuxClass();
         }
 
         private void FreeThread()
@@ -180,6 +187,8 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
 
             pM2Process.Dispose();
             pM2Cylinder.Dispose();
+
+            heater_ctrl.DRV_CLOSE();
 
             DIOClass.CloseDevice();
             MotionClass.DRV_CLOSE();

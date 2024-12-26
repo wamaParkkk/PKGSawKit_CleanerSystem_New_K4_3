@@ -122,6 +122,8 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.textBoxCH2Door = new System.Windows.Forms.TextBox();
             this.textBoxCH1ToolBarcode = new System.Windows.Forms.TextBox();
             this.textBoxCH2ToolBarcode = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBoxWaterTemp = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.PM1_Door_Close.SuspendLayout();
@@ -1128,6 +1130,8 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Ivory;
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.textBoxWaterTemp);
             this.panel1.Controls.Add(this.label46);
             this.panel1.Controls.Add(this.textBoxWaterSupply);
             this.panel1.Controls.Add(this.label45);
@@ -1143,7 +1147,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(661, 8);
+            this.label46.Location = new System.Drawing.Point(547, 8);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(113, 17);
             this.label46.TabIndex = 293;
@@ -1153,7 +1157,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             // 
             this.textBoxWaterSupply.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBoxWaterSupply.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxWaterSupply.Location = new System.Drawing.Point(780, 3);
+            this.textBoxWaterSupply.Location = new System.Drawing.Point(666, 3);
             this.textBoxWaterSupply.Name = "textBoxWaterSupply";
             this.textBoxWaterSupply.ReadOnly = true;
             this.textBoxWaterSupply.Size = new System.Drawing.Size(100, 27);
@@ -1167,7 +1171,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(439, 8);
+            this.label45.Location = new System.Drawing.Point(325, 8);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(111, 17);
             this.label45.TabIndex = 291;
@@ -1177,7 +1181,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             // 
             this.textBoxWaterHeater.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBoxWaterHeater.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxWaterHeater.Location = new System.Drawing.Point(556, 3);
+            this.textBoxWaterHeater.Location = new System.Drawing.Point(442, 3);
             this.textBoxWaterHeater.Name = "textBoxWaterHeater";
             this.textBoxWaterHeater.ReadOnly = true;
             this.textBoxWaterHeater.Size = new System.Drawing.Size(100, 27);
@@ -1191,7 +1195,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(220, 8);
+            this.label43.Location = new System.Drawing.Point(106, 8);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(108, 17);
             this.label43.TabIndex = 289;
@@ -1201,7 +1205,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             // 
             this.textBoxWaterPump.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBoxWaterPump.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxWaterPump.Location = new System.Drawing.Point(334, 3);
+            this.textBoxWaterPump.Location = new System.Drawing.Point(220, 3);
             this.textBoxWaterPump.Name = "textBoxWaterPump";
             this.textBoxWaterPump.ReadOnly = true;
             this.textBoxWaterPump.Size = new System.Drawing.Size(100, 27);
@@ -1306,6 +1310,30 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.textBoxCH2ToolBarcode.Name = "textBoxCH2ToolBarcode";
             this.textBoxCH2ToolBarcode.Size = new System.Drawing.Size(172, 103);
             this.textBoxCH2ToolBarcode.TabIndex = 480;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(772, 8);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(104, 17);
+            this.label15.TabIndex = 297;
+            this.label15.Text = "HotWater temp";
+            // 
+            // textBoxWaterTemp
+            // 
+            this.textBoxWaterTemp.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBoxWaterTemp.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxWaterTemp.Location = new System.Drawing.Point(882, 3);
+            this.textBoxWaterTemp.Name = "textBoxWaterTemp";
+            this.textBoxWaterTemp.ReadOnly = true;
+            this.textBoxWaterTemp.Size = new System.Drawing.Size(100, 27);
+            this.textBoxWaterTemp.TabIndex = 296;
+            this.textBoxWaterTemp.TabStop = false;
+            this.textBoxWaterTemp.Tag = "52";
+            this.textBoxWaterTemp.Text = "--";
+            this.textBoxWaterTemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // OperationForm
             // 
@@ -1486,5 +1514,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         private System.Windows.Forms.TextBox textBoxCH2Door;
         private System.Windows.Forms.TextBox textBoxCH1ToolBarcode;
         private System.Windows.Forms.TextBox textBoxCH2ToolBarcode;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBoxWaterTemp;
     }
 }

@@ -48,12 +48,18 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.txtBoxBrushRotationSpeed = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtBoxWaterTempSet = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtBoxWaterTempSet);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.txtBoxBrushRotateTimeout);
             this.groupBox1.Controls.Add(this.label22);
@@ -73,7 +79,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.groupBox1.Size = new System.Drawing.Size(538, 320);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "< Timeout >";
+            this.groupBox1.Text = "< Timeout / Heater >";
             // 
             // label21
             // 
@@ -292,6 +298,44 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.label11.TabIndex = 24;
             this.label11.Text = "Unit/Sec";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Navy;
+            this.label3.Location = new System.Drawing.Point(495, 201);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 21);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "℃";
+            // 
+            // txtBoxWaterTempSet
+            // 
+            this.txtBoxWaterTempSet.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBoxWaterTempSet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtBoxWaterTempSet.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxWaterTempSet.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtBoxWaterTempSet.Location = new System.Drawing.Point(333, 192);
+            this.txtBoxWaterTempSet.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtBoxWaterTempSet.Name = "txtBoxWaterTempSet";
+            this.txtBoxWaterTempSet.ReadOnly = true;
+            this.txtBoxWaterTempSet.Size = new System.Drawing.Size(152, 30);
+            this.txtBoxWaterTempSet.TabIndex = 55;
+            this.txtBoxWaterTempSet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBoxWaterTempSet.Click += new System.EventHandler(this.txtBoxDoorOpenCloseTimeout_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Navy;
+            this.label4.Location = new System.Drawing.Point(16, 192);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(208, 25);
+            this.label4.TabIndex = 54;
+            this.label4.Text = "[WATER] Temp setting";
+            // 
             // ConfigureForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -334,5 +378,8 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtBoxBrushRotateTimeout;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtBoxWaterTempSet;
+        private System.Windows.Forms.Label label4;
     }
 }

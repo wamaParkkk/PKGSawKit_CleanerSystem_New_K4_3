@@ -208,6 +208,7 @@
     <Compile Include="RecipeSelectForm.Designer.cs">
       <DependentUpon>RecipeSelectForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SerialComm\HanyoungNux_Temp.cs" />
     <Compile Include="Squence\PM1BrushMoving.cs" />
     <Compile Include="Squence\PM1Cylinder.cs" />
     <Compile Include="Squence\PM1Process.cs" />

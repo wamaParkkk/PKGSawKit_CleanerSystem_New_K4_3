@@ -85,6 +85,11 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.labelProcessWait = new System.Windows.Forms.Label();
             this.textBoxDoor = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.textBoxSettingWaterTemp = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxCurrentWaterTemp = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -103,6 +108,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.panel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -342,7 +348,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.groupBox4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(984, 333);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(172, 134);
+            this.groupBox4.Size = new System.Drawing.Size(172, 61);
             this.groupBox4.TabIndex = 318;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Water Sol";
@@ -820,11 +826,75 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.textBoxDoor.Text = "--";
             this.textBoxDoor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.textBoxSettingWaterTemp);
+            this.groupBox7.Controls.Add(this.label9);
+            this.groupBox7.Controls.Add(this.textBoxCurrentWaterTemp);
+            this.groupBox7.Controls.Add(this.label7);
+            this.groupBox7.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(984, 400);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(172, 94);
+            this.groupBox7.TabIndex = 492;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Water Temp";
+            // 
+            // textBoxSettingWaterTemp
+            // 
+            this.textBoxSettingWaterTemp.BackColor = System.Drawing.Color.Khaki;
+            this.textBoxSettingWaterTemp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBoxSettingWaterTemp.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSettingWaterTemp.Location = new System.Drawing.Point(59, 61);
+            this.textBoxSettingWaterTemp.Name = "textBoxSettingWaterTemp";
+            this.textBoxSettingWaterTemp.ReadOnly = true;
+            this.textBoxSettingWaterTemp.Size = new System.Drawing.Size(100, 27);
+            this.textBoxSettingWaterTemp.TabIndex = 265;
+            this.textBoxSettingWaterTemp.TabStop = false;
+            this.textBoxSettingWaterTemp.Tag = "4";
+            this.textBoxSettingWaterTemp.Text = "--";
+            this.textBoxSettingWaterTemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxSettingWaterTemp.Click += new System.EventHandler(this.Analog_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(4, 66);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 17);
+            this.label9.TabIndex = 266;
+            this.label9.Text = "Setting";
+            // 
+            // textBoxCurrentWaterTemp
+            // 
+            this.textBoxCurrentWaterTemp.BackColor = System.Drawing.Color.LightCyan;
+            this.textBoxCurrentWaterTemp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBoxCurrentWaterTemp.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCurrentWaterTemp.Location = new System.Drawing.Point(59, 28);
+            this.textBoxCurrentWaterTemp.Name = "textBoxCurrentWaterTemp";
+            this.textBoxCurrentWaterTemp.ReadOnly = true;
+            this.textBoxCurrentWaterTemp.Size = new System.Drawing.Size(100, 27);
+            this.textBoxCurrentWaterTemp.TabIndex = 263;
+            this.textBoxCurrentWaterTemp.TabStop = false;
+            this.textBoxCurrentWaterTemp.Tag = "4";
+            this.textBoxCurrentWaterTemp.Text = "--";
+            this.textBoxCurrentWaterTemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(4, 33);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 17);
+            this.label7.TabIndex = 264;
+            this.label7.Text = "Current";
+            // 
             // PM2Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnCylinderStop);
             this.Controls.Add(this.groupBox6);
@@ -871,6 +941,8 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.groupBox6.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -933,5 +1005,10 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label labelProcessWait;
         private System.Windows.Forms.TextBox textBoxDoor;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox textBoxSettingWaterTemp;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBoxCurrentWaterTemp;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -731,6 +731,9 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
                 }
             }
 
+            textBoxWaterTemp.Text = Define.temp_PV.ToString();
+
+
             if (Define.bManualLamp)
                 checkBox_ManualLamp.Checked = true;
             else
