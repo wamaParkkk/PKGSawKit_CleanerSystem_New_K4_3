@@ -453,7 +453,8 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
                 }
             }
 
-            textBoxCurrentWaterTemp.Text = Define.temp_PV.ToString();
+            textBoxCurrentWaterTemp.Text = Define.temp_PV.ToString("0.0");
+            textBoxSettingWaterTemp.Text = Define.temp_SV.ToString("0.0");
 
             textBoxAxis1Runsts.Text = MotionClass.motor[Define.axis_r].sR_BusyStatus;            
             textBoxAxis1SpeedCur.Text = string.Format("{0:0.0}", MotionClass.motor[Define.axis_r].dR_CmdVelocity);
@@ -748,7 +749,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
                     if (bResult)
                     {
                         heater_ctrl.set_Temp(dVal);
-                        textBoxSettingWaterTemp.Text = dVal.ToString();
+                        Define.temp_SV = dVal;
                     }
                 }
             }

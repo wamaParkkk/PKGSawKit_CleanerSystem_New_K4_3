@@ -425,5 +425,6 @@
 
         // Heater controller
         public static double temp_PV = 0.0;
+        public static double temp_SV = 0.0;
     }    
 }
