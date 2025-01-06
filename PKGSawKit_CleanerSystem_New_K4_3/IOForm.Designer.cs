@@ -236,9 +236,9 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.label53.ForeColor = System.Drawing.Color.Navy;
             this.label53.Location = new System.Drawing.Point(39, 652);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(165, 25);
+            this.label53.Size = new System.Drawing.Size(175, 25);
             this.label53.TabIndex = 108;
-            this.label53.Text = "[X21] EMO (Rear)";
+            this.label53.Text = "[X21] EMO (Front)";
             // 
             // label32
             // 
@@ -900,9 +900,9 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.label23.ForeColor = System.Drawing.Color.Navy;
             this.label23.Location = new System.Drawing.Point(39, 43);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(175, 25);
+            this.label23.Size = new System.Drawing.Size(165, 25);
             this.label23.TabIndex = 91;
-            this.label23.Text = "[X22] EMO (Front)";
+            this.label23.Text = "[X22] EMO (Rear)";
             // 
             // label25
             // 
