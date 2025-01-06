@@ -658,10 +658,13 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
                         digitalDlg.Init2("Home", "Backward", "Forward", "Nozzle Fwd/Bwd");
                         if (digitalDlg.ShowDialog() == DialogResult.OK)
                         {
-                            if (Global.GetDigValue((int)DigInputList.CH2_Door_Sensor_i) == "Off")
+                            if (!Global.MOTION_INTERLOCK_CHECK())
                             {
-                                MessageBox.Show("Chamber door is opened", "Notification");
-                                return;
+                                if (Global.GetDigValue((int)DigInputList.CH2_Door_Sensor_i) == "Off")
+                                {
+                                    MessageBox.Show("Chamber door is opened", "Notification");
+                                    return;
+                                }
                             }
 
                             if (digitalDlg.m_strResult == "Home")
