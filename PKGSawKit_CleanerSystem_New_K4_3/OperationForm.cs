@@ -731,7 +731,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
                 }
             }
 
-            textBoxWaterTemp.Text = Define.temp_PV.ToString();
+            textBoxWaterTemp.Text = HanyoungNXClassLibrary.Define.temp_PV.ToString("0.0");
 
 
             if (Define.bManualLamp)

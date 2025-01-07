@@ -421,10 +421,6 @@
         public const int axis_r = 0;   // Brush rotation axis
 
         // PKG saw-kit barcode
-        public static string[] strToolBarcode = { string.Empty, string.Empty };
-
-        // Heater controller
-        public static double temp_PV = 0.0;
-        public static double temp_SV = 0.0;
+        public static string[] strToolBarcode = { string.Empty, string.Empty };        
     }    
 }

@@ -1,7 +1,6 @@
 ﻿using Ajin_IO_driver;
 using Ajin_motion_driver;
 using MsSqlManagerLibrary;
-using PKGSawKit_CleanerSystem_New_K4_3.SerialComm;
 using System;
 using System.Drawing;
 using System.IO;
@@ -66,9 +65,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         private static uint nSeqWaitCnt = 0;
 
         static string sendMsg_System = "Idle";
-        static string sendMsg_Water = "Idle";
-
-        private static HanyoungNuxClass heater_ctrl;
+        static string sendMsg_Water = "Idle";        
 
         #region 이벤트로그 파일 폴더 및 파일 생성       
         public static void EventLog(string Msg, string moduleName, string Mode)
@@ -267,9 +264,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
                 prcsInfo.prcsEndTime[nModuleCnt] = string.Empty;
             }
 
-            interlockDisplayForm = new InterlockDisplayForm();
-
-            heater_ctrl = new HanyoungNuxClass();
+            interlockDisplayForm = new InterlockDisplayForm();            
 
             timer.Interval = 100;
             timer.Elapsed += new ElapsedEventHandler(VALUE_INTERLOCK_CHECK);
@@ -677,9 +672,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
                         {
                             SetDigValue((int)DigOutputList.Hot_WaterHeater_o, (uint)DigitalOffOn.On, "PM1");
                         }
-                    }
-
-                    heater_ctrl.set_Temp(Configure_List.Heater_TempSet);
+                    }                    
 
                     if (sendMsg_Water != "Idle")
                     {

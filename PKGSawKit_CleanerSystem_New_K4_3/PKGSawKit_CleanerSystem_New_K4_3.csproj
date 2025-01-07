@@ -63,6 +63,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Ajin_motion_driver\Ajin_motion_driver\bin\Release\Ajin_motion_driver.dll</HintPath>
     </Reference>
+    <Reference Include="HanyoungNXClassLibrary">
+      <HintPath>..\..\HanyoungNXClassLibrary\HanyoungNXClassLibrary\bin\Release\HanyoungNXClassLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="MsSqlManagerLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\MsSqlManagerLibrary\MsSqlManagerLibrary\bin\Release\MsSqlManagerLibrary.dll</HintPath>
@@ -208,7 +211,6 @@
     <Compile Include="RecipeSelectForm.Designer.cs">
       <DependentUpon>RecipeSelectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SerialComm\HanyoungNux_Temp.cs" />
     <Compile Include="Squence\PM1BrushMoving.cs" />
     <Compile Include="Squence\PM1Cylinder.cs" />
     <Compile Include="Squence\PM1Process.cs" />
@@ -365,6 +367,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SerialComm\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

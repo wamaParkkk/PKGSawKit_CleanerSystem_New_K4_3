@@ -1,11 +1,12 @@
 ﻿using Ajin_IO_driver;
-using MsSqlManagerLibrary;
 using Ajin_motion_driver;
+using HanyoungNXClassLibrary;
+using MsSqlManagerLibrary;
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
 using System.Text;
+using System.Windows.Forms;
 
 namespace PKGSawKit_CleanerSystem_New_K4_3
 {
@@ -32,9 +33,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         Squence.PM1BrushMoving pM1BrushMoving;
         
         Squence.PM2Process pM2Process;
-        Squence.PM2Cylinder pM2Cylinder;
-
-        SerialComm.HanyoungNuxClass heater_ctrl;
+        Squence.PM2Cylinder pM2Cylinder;        
 
         bool bLogCnt;
 
@@ -81,7 +80,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             MotionClass.Ajin_Motion_Init();
 
             // Heater controller
-            heater_ctrl.HanyoungNux_Init();
+            HanyoungNXClass.HanyoungNX_Init();
 
             Global.Init();
 
@@ -174,9 +173,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             pM1BrushMoving = new Squence.PM1BrushMoving();            
 
             pM2Process = new Squence.PM2Process();
-            pM2Cylinder = new Squence.PM2Cylinder();
-
-            heater_ctrl = new SerialComm.HanyoungNuxClass();
+            pM2Cylinder = new Squence.PM2Cylinder();            
         }
 
         private void FreeThread()
@@ -186,12 +183,12 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             pM1BrushMoving.Dispose();            
 
             pM2Process.Dispose();
-            pM2Cylinder.Dispose();
-
-            heater_ctrl.DRV_CLOSE();
+            pM2Cylinder.Dispose();            
 
             DIOClass.CloseDevice();
             MotionClass.DRV_CLOSE();
+
+            HanyoungNXClass.DRV_CLOSE();
         }
 
         public void SubFormShow(byte PageNum)
