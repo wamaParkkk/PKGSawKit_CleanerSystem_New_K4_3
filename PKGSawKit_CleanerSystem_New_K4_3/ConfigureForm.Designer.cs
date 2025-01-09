@@ -51,12 +51,18 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.txtBoxBrushRotationSpeed = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtBoxWaterOverTempSet = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtBoxWaterOverTempSet);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtBoxWaterTempSet);
             this.groupBox1.Controls.Add(this.label4);
@@ -76,7 +82,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.groupBox1.Size = new System.Drawing.Size(538, 320);
+            this.groupBox1.Size = new System.Drawing.Size(538, 402);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "< Timeout / Heater >";
@@ -208,7 +214,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.btnParameterSave.ForeColor = System.Drawing.Color.Navy;
             this.btnParameterSave.ImageIndex = 0;
             this.btnParameterSave.ImageList = this.imageList;
-            this.btnParameterSave.Location = new System.Drawing.Point(402, 257);
+            this.btnParameterSave.Location = new System.Drawing.Point(402, 339);
             this.btnParameterSave.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnParameterSave.Name = "btnParameterSave";
             this.btnParameterSave.Size = new System.Drawing.Size(126, 51);
@@ -276,7 +282,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.groupBox2.Size = new System.Drawing.Size(578, 320);
+            this.groupBox2.Size = new System.Drawing.Size(578, 402);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "< Motion parameter (Process)>";
@@ -291,7 +297,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.btnMotionParameterSave.ForeColor = System.Drawing.Color.Navy;
             this.btnMotionParameterSave.ImageIndex = 0;
             this.btnMotionParameterSave.ImageList = this.imageList;
-            this.btnMotionParameterSave.Location = new System.Drawing.Point(442, 257);
+            this.btnMotionParameterSave.Location = new System.Drawing.Point(442, 339);
             this.btnMotionParameterSave.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnMotionParameterSave.Name = "btnMotionParameterSave";
             this.btnMotionParameterSave.Size = new System.Drawing.Size(126, 51);
@@ -341,6 +347,45 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.label11.TabIndex = 24;
             this.label11.Text = "Unit/Sec";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Navy;
+            this.label5.Location = new System.Drawing.Point(495, 243);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 21);
+            this.label5.TabIndex = 62;
+            this.label5.Text = "℃";
+            // 
+            // txtBoxWaterOverTempSet
+            // 
+            this.txtBoxWaterOverTempSet.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBoxWaterOverTempSet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtBoxWaterOverTempSet.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxWaterOverTempSet.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtBoxWaterOverTempSet.Location = new System.Drawing.Point(333, 234);
+            this.txtBoxWaterOverTempSet.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtBoxWaterOverTempSet.Name = "txtBoxWaterOverTempSet";
+            this.txtBoxWaterOverTempSet.ReadOnly = true;
+            this.txtBoxWaterOverTempSet.Size = new System.Drawing.Size(152, 30);
+            this.txtBoxWaterOverTempSet.TabIndex = 61;
+            this.txtBoxWaterOverTempSet.Tag = "1";
+            this.txtBoxWaterOverTempSet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBoxWaterOverTempSet.Click += new System.EventHandler(this.txtBoxDoorOpenCloseTimeout_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Navy;
+            this.label6.Location = new System.Drawing.Point(16, 234);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(253, 25);
+            this.label6.TabIndex = 60;
+            this.label6.Text = "[WATER] Over temp setting";
+            // 
             // ConfigureForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -386,5 +431,8 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtBoxWaterTempSet;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtBoxWaterOverTempSet;
+        private System.Windows.Forms.Label label6;
     }
 }

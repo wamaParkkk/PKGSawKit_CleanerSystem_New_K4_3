@@ -275,6 +275,7 @@
         public static int Brush_FwdBwd_Timeout = 0;
         public static int Nozzle_FwdBwd_Timeout = 0;
         public static double Heater_TempSet = 0.0;
+        public static double Heater_OverTempSet = 0.0;
 
         // Motion parameter (공정 진행 시)
         public static double Brush_Rotation_Speed = 0;                

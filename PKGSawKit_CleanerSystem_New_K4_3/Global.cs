@@ -666,18 +666,64 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
                 }
                 else
                 {
-                    if (digSet.curDigSet[(int)DigOutputList.Hot_WaterHeater_o] != null)
+                    if (HanyoungNXClassLibrary.Define.temp_PV <= Configure_List.Heater_OverTempSet)
                     {
-                        if (digSet.curDigSet[(int)DigOutputList.Hot_WaterHeater_o] != "On")
+                        if ((GetDigValue((int)DigInputList.EMO_Front_i) == "On") &&
+                            (GetDigValue((int)DigInputList.EMO_Rear_i) == "On"))
                         {
-                            SetDigValue((int)DigOutputList.Hot_WaterHeater_o, (uint)DigitalOffOn.On, "PM1");
-                        }
-                    }                    
+                            if (digSet.curDigSet[(int)DigOutputList.Hot_WaterHeater_o] != null)
+                            {
+                                if (digSet.curDigSet[(int)DigOutputList.Hot_WaterHeater_o] != "On")
+                                {
+                                    SetDigValue((int)DigOutputList.Hot_WaterHeater_o, (uint)DigitalOffOn.On, "PM1");
+                                }
+                            }
 
-                    if (sendMsg_Water != "Idle")
+                            if (sendMsg_Water != "Idle")
+                            {
+                                //HostConnection.Host_Set_SystemStatus(hostEquipmentInfo, "WaterTank", "Idle");
+                                sendMsg_Water = "Idle";
+                            }
+                        }
+                    }
+                    else
                     {
-                        //HostConnection.Host_Set_SystemStatus(hostEquipmentInfo, "WaterTank", "Idle");
-                        sendMsg_Water = "Idle";
+                        if (digSet.curDigSet[(int)DigOutputList.Hot_WaterHeater_o] != null)
+                        {
+                            if (digSet.curDigSet[(int)DigOutputList.Hot_WaterHeater_o] != "Off")
+                            {
+                                SetDigValue((int)DigOutputList.Hot_WaterHeater_o, (uint)DigitalOffOn.Off, "PM1");
+                            }
+                        }
+
+                        if (Define.sInterlockMsg == string.Empty)
+                        {
+                            SetDigValue((int)DigOutputList.Buzzer_o, (uint)DigitalOffOn.On, "PM1");
+
+                            Define.sInterlockMsg = "Water temperature is high!";
+                            Define.sInterlockChecklist = "Check the water heater";
+
+                            DialogResult result = interlockDisplayForm.ShowDialog();
+                            if (result == DialogResult.OK)
+                            {
+                                Define.sInterlockMsg = "";
+                                Define.sInterlockChecklist = "";
+                            }
+
+                            if (sendMsg_Water != "Alarm")
+                            {
+                                //HostConnection.Host_Set_SystemStatus(hostEquipmentInfo, "WaterTank", "Alarm");
+                                sendMsg_Water = "Alarm";
+                            }
+                        }
+                        else
+                        {
+                            if (sendMsg_Water != "Alarm")
+                            {
+                                //HostConnection.Host_Set_SystemStatus(hostEquipmentInfo, "WaterTank", "Alarm");
+                                sendMsg_Water = "Alarm";
+                            }
+                        }
                     }
                 }
                 ////////////////////////////////////////////////////////////////////////////////////////////////

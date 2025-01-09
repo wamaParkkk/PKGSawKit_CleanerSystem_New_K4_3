@@ -52,11 +52,13 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
                         Configure_List.Brush_FwdBwd_Timeout = int.Parse(spString[1]);
                         Configure_List.Nozzle_FwdBwd_Timeout = int.Parse(spString[2]);
                         Configure_List.Heater_TempSet = double.Parse(spString[3]);
+                        Configure_List.Heater_OverTempSet = double.Parse(spString[4]);
 
                         txtBoxBrushRotateTimeout.Text = (Configure_List.Brush_Rotation_Timeout).ToString();
                         txtBoxBrushFwdBwdTimeout.Text = (Configure_List.Brush_FwdBwd_Timeout).ToString();
                         txtBoxNozzleFwdBwdTimeout.Text = (Configure_List.Nozzle_FwdBwd_Timeout).ToString();
                         txtBoxWaterTempSet.Text = (Configure_List.Heater_TempSet).ToString();
+                        txtBoxWaterOverTempSet.Text = (Configure_List.Heater_OverTempSet).ToString();
                     }
                 }
             }
@@ -116,13 +118,15 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             string sBrushFwdBwdTimeout = txtBoxBrushFwdBwdTimeout.Text.ToString().Trim();
             string sNozzleFwdBwdTimeout = txtBoxNozzleFwdBwdTimeout.Text.ToString().Trim();
             string sWaterTempSet = txtBoxWaterTempSet.Text.ToString().Trim();
+            string sWaterOverTempSet = txtBoxWaterOverTempSet.Text.ToString().Trim();
 
-            if (Parameter_WriteFile(sBrushRotateTimeout, sBrushFwdBwdTimeout, sNozzleFwdBwdTimeout, sWaterTempSet))
+            if (Parameter_WriteFile(sBrushRotateTimeout, sBrushFwdBwdTimeout, sNozzleFwdBwdTimeout, sWaterTempSet, sWaterOverTempSet))
             {
                 Configure_List.Brush_Rotation_Timeout = int.Parse(sBrushRotateTimeout);
                 Configure_List.Brush_FwdBwd_Timeout = int.Parse(sBrushFwdBwdTimeout);
                 Configure_List.Nozzle_FwdBwd_Timeout = int.Parse(sNozzleFwdBwdTimeout);
                 Configure_List.Heater_TempSet = double.Parse(sWaterTempSet);
+                Configure_List.Heater_OverTempSet = double.Parse(sWaterOverTempSet);
 
                 MessageBox.Show("Configure 값이 저장 되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -132,13 +136,13 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             }
         }
 
-        private bool Parameter_WriteFile(string param1, string param2, string param3, string param4)
+        private bool Parameter_WriteFile(string param1, string param2, string param3, string param4, string param5)
         {
             string FileName = "Configure.txt";
 
             try
             {
-                File.WriteAllText(Global.ConfigurePath + FileName, param1 + "," + param2 + "," + param3 + "," + param4, Encoding.Default);
+                File.WriteAllText(Global.ConfigurePath + FileName, param1 + "," + param2 + "," + param3 + "," + param4 + "," + param5, Encoding.Default);
 
                 return true;
             }
