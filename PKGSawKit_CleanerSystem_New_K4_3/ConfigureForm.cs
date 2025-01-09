@@ -91,9 +91,10 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         private void txtBoxDoorOpenCloseTimeout_Click(object sender, EventArgs e)
         {
             TextBox textBox = (TextBox)sender;
+            int iTag = int.Parse(textBox.Tag.ToString());
 
             AnaDlg = new AnalogDlg();
-            AnaDlg.Init();
+            AnaDlg.Init(iTag);
             if (AnaDlg.ShowDialog() == DialogResult.OK)
             {
                 textBox.Text = AnaDlg.m_strResult;

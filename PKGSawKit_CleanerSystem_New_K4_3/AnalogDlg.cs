@@ -40,9 +40,9 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             txtResult.Focus();
         }
 
-        public void Init()
+        public void Init(int iDec)
         {
-            //
+            ana.dec = iDec;
         }
 
         private void ana_Key_1_Click(object sender, EventArgs e)

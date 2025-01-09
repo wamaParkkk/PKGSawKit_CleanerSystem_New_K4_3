@@ -160,7 +160,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             TextBox txtBox = (TextBox)sender;
 
             analogDlg = new AnalogDlg();
-            analogDlg.Init();
+            analogDlg.Init(0);
             if (analogDlg.ShowDialog() == DialogResult.OK)
             {
                 txtBox.Text = analogDlg.m_strResult.ToString();
@@ -175,7 +175,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             TextBox txtBox = (TextBox)sender;
 
             analogDlg = new AnalogDlg();
-            analogDlg.Init();
+            analogDlg.Init(0);
             if (analogDlg.ShowDialog() == DialogResult.OK)
             {
                 txtBox.Text = analogDlg.m_strResult.ToString();
@@ -190,7 +190,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             TextBox txtBox = (TextBox)sender;
 
             analogDlg = new AnalogDlg();
-            analogDlg.Init();
+            analogDlg.Init(0);
             if (analogDlg.ShowDialog() == DialogResult.OK)
             {
                 txtBox.Text = analogDlg.m_strResult.ToString();
@@ -205,7 +205,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             TextBox txtBox = (TextBox)sender;
 
             analogDlg = new AnalogDlg();
-            analogDlg.Init();
+            analogDlg.Init(0);
             if (analogDlg.ShowDialog() == DialogResult.OK)
             {
                 txtBox.Text = analogDlg.m_strResult.ToString();
@@ -220,7 +220,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             TextBox txtBox = (TextBox)sender;
 
             analogDlg = new AnalogDlg();
-            analogDlg.Init();
+            analogDlg.Init(0);
             if (analogDlg.ShowDialog() == DialogResult.OK)
             {
                 txtBox.Text = analogDlg.m_strResult.ToString();

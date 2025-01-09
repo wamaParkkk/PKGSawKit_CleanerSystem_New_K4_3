@@ -32,6 +32,9 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigureForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtBoxWaterTempSet = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.txtBoxBrushRotateTimeout = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -48,9 +51,6 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.txtBoxBrushRotationSpeed = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtBoxWaterTempSet = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -81,6 +81,45 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "< Timeout / Heater >";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Navy;
+            this.label3.Location = new System.Drawing.Point(495, 201);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 21);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "℃";
+            // 
+            // txtBoxWaterTempSet
+            // 
+            this.txtBoxWaterTempSet.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBoxWaterTempSet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtBoxWaterTempSet.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxWaterTempSet.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtBoxWaterTempSet.Location = new System.Drawing.Point(333, 192);
+            this.txtBoxWaterTempSet.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtBoxWaterTempSet.Name = "txtBoxWaterTempSet";
+            this.txtBoxWaterTempSet.ReadOnly = true;
+            this.txtBoxWaterTempSet.Size = new System.Drawing.Size(152, 30);
+            this.txtBoxWaterTempSet.TabIndex = 55;
+            this.txtBoxWaterTempSet.Tag = "1";
+            this.txtBoxWaterTempSet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBoxWaterTempSet.Click += new System.EventHandler(this.txtBoxDoorOpenCloseTimeout_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Navy;
+            this.label4.Location = new System.Drawing.Point(16, 192);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(208, 25);
+            this.label4.TabIndex = 54;
+            this.label4.Text = "[WATER] Temp setting";
+            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -105,6 +144,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.txtBoxBrushRotateTimeout.ReadOnly = true;
             this.txtBoxBrushRotateTimeout.Size = new System.Drawing.Size(152, 30);
             this.txtBoxBrushRotateTimeout.TabIndex = 49;
+            this.txtBoxBrushRotateTimeout.Tag = "0";
             this.txtBoxBrushRotateTimeout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBoxBrushRotateTimeout.Click += new System.EventHandler(this.txtBoxDoorOpenCloseTimeout_Click);
             // 
@@ -143,6 +183,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.txtBoxNozzleFwdBwdTimeout.ReadOnly = true;
             this.txtBoxNozzleFwdBwdTimeout.Size = new System.Drawing.Size(152, 30);
             this.txtBoxNozzleFwdBwdTimeout.TabIndex = 43;
+            this.txtBoxNozzleFwdBwdTimeout.Tag = "0";
             this.txtBoxNozzleFwdBwdTimeout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBoxNozzleFwdBwdTimeout.Click += new System.EventHandler(this.txtBoxDoorOpenCloseTimeout_Click);
             // 
@@ -208,6 +249,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.txtBoxBrushFwdBwdTimeout.ReadOnly = true;
             this.txtBoxBrushFwdBwdTimeout.Size = new System.Drawing.Size(152, 30);
             this.txtBoxBrushFwdBwdTimeout.TabIndex = 31;
+            this.txtBoxBrushFwdBwdTimeout.Tag = "0";
             this.txtBoxBrushFwdBwdTimeout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBoxBrushFwdBwdTimeout.Click += new System.EventHandler(this.txtBoxDoorOpenCloseTimeout_Click);
             // 
@@ -272,6 +314,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.txtBoxBrushRotationSpeed.ReadOnly = true;
             this.txtBoxBrushRotationSpeed.Size = new System.Drawing.Size(152, 30);
             this.txtBoxBrushRotationSpeed.TabIndex = 30;
+            this.txtBoxBrushRotationSpeed.Tag = "0";
             this.txtBoxBrushRotationSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBoxBrushRotationSpeed.Click += new System.EventHandler(this.txtBoxDoorOpenCloseTimeout_Click);
             // 
@@ -297,44 +340,6 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.label11.Size = new System.Drawing.Size(76, 21);
             this.label11.TabIndex = 24;
             this.label11.Text = "Unit/Sec";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(495, 201);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 21);
-            this.label3.TabIndex = 56;
-            this.label3.Text = "℃";
-            // 
-            // txtBoxWaterTempSet
-            // 
-            this.txtBoxWaterTempSet.BackColor = System.Drawing.SystemColors.Control;
-            this.txtBoxWaterTempSet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtBoxWaterTempSet.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxWaterTempSet.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtBoxWaterTempSet.Location = new System.Drawing.Point(333, 192);
-            this.txtBoxWaterTempSet.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.txtBoxWaterTempSet.Name = "txtBoxWaterTempSet";
-            this.txtBoxWaterTempSet.ReadOnly = true;
-            this.txtBoxWaterTempSet.Size = new System.Drawing.Size(152, 30);
-            this.txtBoxWaterTempSet.TabIndex = 55;
-            this.txtBoxWaterTempSet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBoxWaterTempSet.Click += new System.EventHandler(this.txtBoxDoorOpenCloseTimeout_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(16, 192);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(208, 25);
-            this.label4.TabIndex = 54;
-            this.label4.Text = "[WATER] Temp setting";
             // 
             // ConfigureForm
             // 
