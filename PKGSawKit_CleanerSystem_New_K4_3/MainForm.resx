@@ -124,7 +124,7 @@
   <data name="panel5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABlEAAABqCAYAAAAsh3cbAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
-        mAAAFpgBvm30rgAAlTNJREFUeF7t/WV4XNfWL/iWOZyYmeIwx44DhjhmO47txCRZsp04nDiMjuOYmS2Z
+        lwAAFpcByKNatAAAlTNJREFUeF7t/WV4XNfWL/iWOZyYmeIwx44DhjhmO47txCRZsp04nDiMjuOYmS2Z
         mZmZKcy0Q5v3Pu/7ntv3nntvf+nu0/30c8cdY1Utaaj0XzBVSyWVND/8MqRSjTFhzQXSjKzY9kOfULId
         hz8tsPXAJce2gx879Ht2Hf6EdvFruw9epN0HOALb9p5PuFDM9j3nadfus7Rn9+kCe3cl2X3SsW+X60QB
         eX33jtO0a8fZMrN72xlfu7Zy/3ygnLB2bY/bmQJUV9uznY9PGdq745ynPTvP8fHHxyWs3VLDB8oxgeZc
@@ -3544,4 +3544,7 @@
         riOo87LGBlF90JjWkUB+JpBt3QjvxwZ/vP0HM6zMyh3eHocAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="HeaterInitTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>138, 17</value>
+  </metadata>
 </root>

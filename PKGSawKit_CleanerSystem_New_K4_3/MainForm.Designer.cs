@@ -72,6 +72,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.panelOption = new System.Windows.Forms.Panel();
             this.checkBoxInterlockRelease = new System.Windows.Forms.CheckBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.HeaterInitTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -665,6 +666,11 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.panel6.Size = new System.Drawing.Size(22, 824);
             this.panel6.TabIndex = 39;
             // 
+            // HeaterInitTimer
+            // 
+            this.HeaterInitTimer.Interval = 5000;
+            this.HeaterInitTimer.Tick += new System.EventHandler(this.HeaterInitTimer_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -751,5 +757,6 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         private System.Windows.Forms.PictureBox pictureBoxAlarm;
         private System.Windows.Forms.PictureBox pictureBoxAlarm2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer HeaterInitTimer;
     }
 }
