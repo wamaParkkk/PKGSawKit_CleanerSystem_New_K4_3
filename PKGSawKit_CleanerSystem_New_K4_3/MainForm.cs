@@ -87,7 +87,8 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             // 가동 시간 불러오기
             RUNTIME_LOAD();
 
-            timerDisplay.Enabled = true;            
+            timerDisplay.Enabled = true;
+            HeaterInitTimer.Enabled = true;
 
             SubFormShow((byte)Page.LogInPage);
 
