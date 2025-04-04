@@ -591,6 +591,10 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             {
                 labelPageName.Text = "Log-In";
             }
+            else if (Define.currentPage == (byte)Page.ToolHistory)
+            {
+                labelPageName.Text = "Tool history";
+            }
 
 
             // User level에 따른 버튼 활성화
