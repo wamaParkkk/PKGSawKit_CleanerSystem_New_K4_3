@@ -19,6 +19,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         string ModuleName;
 
         RecipeSelectForm recipeSelectForm;
+        ToolInfoRegistForm toolInfoRegistForm;
         DigitalDlg digitalDlg;
         AnalogDlg analogDlg;        
 
@@ -774,52 +775,57 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             switch (strTmp)
             {
                 case "Start":
-                    {                        
+                    {
+                        if (!Define.bInterlockRelease)
+                        {
+                            /*
+                            if (Global.GetDigValue((int)DigInputList.Front_Door_Sensor_i) == "Off")
+                            {
+                                MessageBox.Show("Front door가 열려 있습니다", "알림");
+                                return;
+                            }
+                            */
+                            if (Global.GetDigValue((int)DigInputList.Left_Door_Sensor_i) == "Off")
+                            {
+                                MessageBox.Show("Left door가 열려 있습니다", "알림");
+                                return;
+                            }
+
+                            if (Global.GetDigValue((int)DigInputList.Right_Door_Sensor_i) == "Off")
+                            {
+                                MessageBox.Show("Right door가 열려 있습니다", "알림");
+                                return;
+                            }
+
+                            if (Global.GetDigValue((int)DigInputList.Back_Door_Sensor_i) == "Off")
+                            {
+                                MessageBox.Show("Back door가 열려 있습니다", "알림");
+                                return;
+                            }
+
+                            if (Global.GetDigValue((int)DigInputList.CH1_Door_Sensor_i) == "Off")
+                            {
+                                MessageBox.Show("Chamber door is opened", "Notification");
+                                return;
+                            }
+                        }
+
                         if (MessageBox.Show("공정을 진행 하겠습니까?", "알림", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
-                            Define.iSelectRecipeModule = module;
-
-                            recipeSelectForm = new RecipeSelectForm();
-
-                            if (recipeSelectForm.ShowDialog() == DialogResult.OK)
+                            toolInfoRegistForm = new ToolInfoRegistForm();
+                            toolInfoRegistForm.Init(module);
+                            if (toolInfoRegistForm.ShowDialog() == DialogResult.OK)
                             {
-                                if (!Define.bInterlockRelease)
+                                Define.iSelectRecipeModule = module;
+
+                                recipeSelectForm = new RecipeSelectForm();
+
+                                if (recipeSelectForm.ShowDialog() == DialogResult.OK)
                                 {
-                                    /*
-                                    if (Global.GetDigValue((int)DigInputList.Front_Door_Sensor_i) == "Off")
-                                    {
-                                        MessageBox.Show("Front door가 열려 있습니다", "알림");
-                                        return;
-                                    }
-                                    */
-                                    if (Global.GetDigValue((int)DigInputList.Left_Door_Sensor_i) == "Off")
-                                    {
-                                        MessageBox.Show("Left door가 열려 있습니다", "알림");
-                                        return;
-                                    }
-
-                                    if (Global.GetDigValue((int)DigInputList.Right_Door_Sensor_i) == "Off")
-                                    {
-                                        MessageBox.Show("Right door가 열려 있습니다", "알림");
-                                        return;
-                                    }
-
-                                    if (Global.GetDigValue((int)DigInputList.Back_Door_Sensor_i) == "Off")
-                                    {
-                                        MessageBox.Show("Back door가 열려 있습니다", "알림");
-                                        return;
-                                    }
-
-                                    if (Global.GetDigValue((int)DigInputList.CH1_Door_Sensor_i) == "Off")
-                                    {
-                                        MessageBox.Show("Chamber door is opened", "Notification");
-                                        return;
-                                    }
+                                    Define.seqMode[module] = Define.MODE_PROCESS;
+                                    Define.seqCtrl[module] = Define.CTRL_RUN;
+                                    Define.seqSts[module] = Define.STS_IDLE;
                                 }
-
-                                Define.seqMode[module] = Define.MODE_PROCESS;
-                                Define.seqCtrl[module] = Define.CTRL_RUN;
-                                Define.seqSts[module] = Define.STS_IDLE;
                             }
                         }
                     }

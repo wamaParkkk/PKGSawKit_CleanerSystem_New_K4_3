@@ -27,6 +27,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         AlarmForm m_alarmForm;
         EventLogForm m_eventLogForm;
         UserRegistForm m_userRegistForm;
+        ToolHistoryForm m_toolHistoryForm;
 
         Squence.PM1Process pM1Process;
         Squence.PM1Cylinder pM1Cylinder;
@@ -92,7 +93,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
 
             SubFormShow((byte)Page.LogInPage);
 
-            F_ButtonVisible(false, false, false, false, false, false, false, false);
+            F_ButtonVisible(false, false, false, false, false, false, false, false, false);
         }
 
         public class MyNativeWindows : NativeWindow
@@ -165,6 +166,10 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             m_eventLogForm = new EventLogForm();
             m_eventLogForm.MdiParent = this;
             m_eventLogForm.Show();
+
+            m_toolHistoryForm = new ToolHistoryForm();
+            m_toolHistoryForm.MdiParent = this;
+            m_toolHistoryForm.Show();
         }
 
         private void CreateThread()
@@ -281,6 +286,15 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
                             F_ModuleButtonVisible(false, false, false);
                         }
                         break;
+
+                    case (byte)Page.ToolHistory:
+                        {
+                            m_toolHistoryForm.Activate();
+                            m_toolHistoryForm.BringToFront();
+
+                            F_ModuleButtonVisible(false, false, false);
+                        }
+                        break;
                 }
             }
             catch
@@ -289,7 +303,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             }
         }
 
-        private void F_ButtonVisible(bool bOpBtn, bool bMaintBtn, bool bRecipeBtn, bool bConfigureBtn, bool bIOBtn, bool bAlarmBtn, bool bEventLogBtn, bool bUserRegistBtn)
+        private void F_ButtonVisible(bool bOpBtn, bool bMaintBtn, bool bRecipeBtn, bool bConfigureBtn, bool bIOBtn, bool bAlarmBtn, bool bEventLogBtn, bool bUserRegistBtn, bool bToolHistoryBtn)
         {
             pictureBoxOperation.Enabled = bOpBtn;
             btnOperation.Enabled = bOpBtn;
@@ -315,6 +329,9 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
 
             pictureBoxUserRegist.Enabled = bUserRegistBtn;
             btnUserRegist.Enabled = bUserRegistBtn;
+
+            pictureBoxToolHistory.Enabled = bToolHistoryBtn;
+            btnToolHistory.Enabled = bToolHistoryBtn;
         }
 
         private void F_ModuleButtonVisible(bool bCH1Btn, bool bCH2Btn, bool bMotorBtn)
@@ -367,6 +384,11 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         private void btnUserRegist_Click(object sender, EventArgs e)
         {
             SubFormShow((byte)Page.UserRegist);
+        }
+
+        private void btnToolHistory_Click(object sender, EventArgs e)
+        {
+            SubFormShow((byte)Page.ToolHistory);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -569,21 +591,21 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             {
                 labelPageName.Text = "Log-In";
             }
-            
+
 
             // User level에 따른 버튼 활성화
             if (Define.UserLevel == "Master")
             {
-                // op, maint, recipe, configure, io, alarm, userRegist
-                F_ButtonVisible(true, true, true, true, true, true, true, true);
+                // op, maint, recipe, configure, io, alarm, eventlog, userRegist, history
+                F_ButtonVisible(true, true, true, true, true, true, true, true, true);
             }
             else if (Define.UserLevel == "Maintnance")
             {
-                F_ButtonVisible(true, true, true, true, true, true, true, false);
+                F_ButtonVisible(true, true, true, true, true, true, true, false, true);
             }
             else if (Define.UserLevel == "User")
             {
-                F_ButtonVisible(true, false, true, true, false, true, true, false);
+                F_ButtonVisible(true, false, false, true, false, true, true, false, true);
             }
 
 
@@ -801,6 +823,6 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             HanyoungNXClassLibrary.Define.temp_SV = Configure_List.Heater_TempSet;
 
             HeaterInitTimer.Enabled = false;
-        }
+        }        
     }
 }

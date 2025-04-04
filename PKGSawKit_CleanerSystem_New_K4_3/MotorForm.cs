@@ -163,10 +163,20 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             analogDlg.Init(0);
             if (analogDlg.ShowDialog() == DialogResult.OK)
             {
-                txtBox.Text = analogDlg.m_strResult.ToString();
-                double dVal = Convert.ToDouble(txtBox.Text);
+                string sVal = analogDlg.m_strResult;
+                bool bResult = double.TryParse(sVal, out double dVal);
+                if ((bResult) && (dVal <= 3000))
+                {
+                    double dVelocity = dVal;
+                    txtBox.Text = dVelocity.ToString();
 
-                MotionClass.SetMotorVelocity(Convert.ToInt32(txtBox.Tag), dVal);
+                    MotionClass.SetMotorVelocity(Convert.ToInt32(txtBox.Tag), dVelocity);
+                }
+                else
+                {
+                    MessageBox.Show("속도 값을 확인해 주세요 (MAX:3000)", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
             }
         }
 

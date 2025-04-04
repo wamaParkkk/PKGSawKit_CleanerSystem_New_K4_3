@@ -17,7 +17,8 @@
         IOPage = 5,
         AlarmPage = 6,
         EventLogPage = 7,
-        UserRegist = 8
+        UserRegist = 8,
+        ToolHistory = 9
     }
 
     public enum DigitalOffOn
@@ -421,7 +422,15 @@
         // Motor axis        
         public const int axis_r = 0;   // Brush rotation axis
 
-        // PKG saw-kit barcode
-        public static string[] strToolBarcode = { string.Empty, string.Empty };        
+        // Tool 이력 관리 정보        
+        public static string[] ToolInfoRegist_User = { string.Empty, string.Empty };
+        public static string[] ToolInfoRegist_ToolBox = { string.Empty, string.Empty };
+        public static string[] ToolInfoRegist_MC = { string.Empty, string.Empty };
+        public static string[] ToolInfoRegist_ToolID = { string.Empty, string.Empty };
+        public static string[] ToolInfoRegist_Tool_CT = { string.Empty, string.Empty };
+        public static string[] ToolInfoRegist_Tool_UP = { string.Empty, string.Empty };
+        public static string[] ToolInfoRegist_Tool_DB = { string.Empty, string.Empty };
+        public static string[] ToolInfoRegist_Tool_TP = { string.Empty, string.Empty };
+        public static string[] ToolInfoRegist_Tool_TT = { string.Empty, string.Empty };
     }    
 }

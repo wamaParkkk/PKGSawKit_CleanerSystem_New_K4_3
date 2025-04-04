@@ -35,6 +35,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3.Squence
         Alarm_List alarm_List;  // Alarm list
 
         private bool bWaitSet;
+        private string prcsStartTime;
 
         public PM1Process()
         {
@@ -229,13 +230,12 @@ namespace PKGSawKit_CleanerSystem_New_K4_3.Squence
                 Global.prcsInfo.prcsStepCurrentTime[module] = 1;
                 Global.prcsInfo.prcsStepTotalTime[module] = 0;
                 Global.prcsInfo.prcsEndTime[module] = string.Empty;
+                prcsStartTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");
 
                 checkFlag.AirFlag = false;
                 checkFlag.WaterFlag = false;
 
-                bWaitSet = false;
-
-                Global.EventLog($"<<< {Define.strToolBarcode[module]} >>>", ModuleName, "Event");
+                bWaitSet = false;                
 
                 Define.seqCtrl[module] = Define.CTRL_RUNNING;
                 Define.seqSts[module] = Define.STS_PROCESS_ING;
@@ -1104,6 +1104,8 @@ namespace PKGSawKit_CleanerSystem_New_K4_3.Squence
             Global.EventLog("PROCESS COMPLETED.", ModuleName, "Event");            
 
             F_DAILY_COUNT();
+
+            F_TOOL_HISTORY();
         }        
 
         private void F_PROCESS_ALL_VALVE_CLOSE()
@@ -1155,6 +1157,47 @@ namespace PKGSawKit_CleanerSystem_New_K4_3.Squence
         {            
             Define.iPM1DailyCnt++;
             Global.DailyLog(Define.iPM1DailyCnt, ModuleName);            
+        }
+
+        private void F_TOOL_HISTORY()
+        {
+            string todayDate = DateTime.Now.ToString("yyyy-MM-dd");
+            string user = Define.ToolInfoRegist_User[module];
+            string toolBoxInfo = Define.ToolInfoRegist_ToolBox[module];
+            string mcInfo = Define.ToolInfoRegist_MC[module];
+            string toolID = Define.ToolInfoRegist_ToolID[module];
+            string toolCT = Define.ToolInfoRegist_Tool_CT[module];
+            string toolUP = Define.ToolInfoRegist_Tool_UP[module];
+            string toolDB = Define.ToolInfoRegist_Tool_DB[module];
+            string toolTP = Define.ToolInfoRegist_Tool_TP[module];
+            string toolTT = Define.ToolInfoRegist_Tool_TT[module];
+            string ch = ModuleName;
+            string startTime = prcsStartTime;
+            string endTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+
+            // CSV 형식으로 문자열 만듬
+            string[] data = { todayDate, user, toolBoxInfo, mcInfo, toolID, toolCT, toolUP, toolDB, toolTP, toolTT, ch, startTime, endTime };
+            string csvLine = string.Join(",", data);
+
+            // 파일에 데이터 저장            
+            string fileName = string.Format("{0}{1}_{2}.csv", Global.toolHistoryfilePath, toolID, endTime);
+            try
+            {
+                // 파일이 존재하지 않으면 헤더 추가
+                if (!File.Exists(fileName))
+                {
+                    string header = "날짜,사용자,툴보관함,탈착한장비,ToolID,C/T,U/P,D/B,T/P,T/T,챔버,공정시작시간,공정종료시간";
+                    File.WriteAllText(fileName, header + Environment.NewLine);
+                }
+                // 파일에 데이터 추가
+                File.AppendAllText(fileName, csvLine + Environment.NewLine);
+
+                Global.EventLog("Tool 이력 데이터가 저장되었습니다", ModuleName, "Event");
+            }
+            catch (Exception ex)
+            {
+                Global.EventLog($"Tool 이력 데이터 파일 저장 중 오류가 발생했습니다: {ex.Message}", ModuleName, "Event");
+            }
         }
         #endregion
 

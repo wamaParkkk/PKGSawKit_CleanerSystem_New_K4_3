@@ -52,6 +52,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         public static string ConfigurePath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"..\..\Configure\"));
         public static string serialPortInfoPath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"..\..\SerialComm\"));
         public static string dailyCntfilePath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"..\..\DailyCount\"));
+        public static string toolHistoryfilePath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"..\..\ToolHistory\"));
 
         public static string hostEquipmentInfo = "K5EE_PKGsawCleaningSystem";
         public static string hostEquipmentInfo_Log = "K5EE_PKGsawCleaningSystemLog";

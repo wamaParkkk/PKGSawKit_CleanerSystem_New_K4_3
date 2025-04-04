@@ -112,6 +112,31 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             }
         }
 
+        private void txtBoxBrushRotationSpeed_Click(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            int iTag = int.Parse(textBox.Tag.ToString());
+
+            AnaDlg = new AnalogDlg();
+            AnaDlg.Init(iTag);
+            if (AnaDlg.ShowDialog() == DialogResult.OK)
+            {
+                string sVal = AnaDlg.m_strResult;
+                bool bResult = int.TryParse(sVal, out int iVal);
+                if ((bResult) && (iVal <= 3000))
+                {
+                    int iVelocity = iVal;
+                    textBox.Text = iVelocity.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("속도 값을 확인해 주세요 (MAX:3000)", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    MOTION_PARAMETER_LOAD();
+                }
+            }
+        }
+
         private void btnParameterSave_Click(object sender, EventArgs e)
         {
             string sBrushRotateTimeout = txtBoxBrushRotateTimeout.Text.ToString().Trim();
@@ -184,6 +209,6 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
                 MessageBox.Show(ex.Message, "알림");
                 return false;
             }
-        }
+        }        
     }
 }

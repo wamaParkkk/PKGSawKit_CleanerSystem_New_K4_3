@@ -34,6 +34,32 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.timerDisplay = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panelOption = new System.Windows.Forms.Panel();
+            this.checkBoxInterlockRelease = new System.Windows.Forms.CheckBox();
+            this.HeaterInitTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnMotorModule = new System.Windows.Forms.Button();
+            this.btnCH2Module = new System.Windows.Forms.Button();
+            this.btnCH1Module = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.pictureBoxToolHistory = new System.Windows.Forms.PictureBox();
+            this.btnToolHistory = new System.Windows.Forms.Button();
+            this.pictureBoxOperation = new System.Windows.Forms.PictureBox();
+            this.btnOperation = new System.Windows.Forms.Button();
+            this.pictureBoxExit = new System.Windows.Forms.PictureBox();
+            this.pictureBoxIO = new System.Windows.Forms.PictureBox();
+            this.pictureBoxConfigure = new System.Windows.Forms.PictureBox();
+            this.pictureBoxRecipe = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMain = new System.Windows.Forms.PictureBox();
+            this.btnMaintnance = new System.Windows.Forms.Button();
+            this.btnConfigure = new System.Windows.Forms.Button();
+            this.btnRecipe = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnIO = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBoxAlarm = new System.Windows.Forms.PictureBox();
@@ -48,50 +74,27 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.labelPageName = new System.Windows.Forms.Label();
             this.laTime = new System.Windows.Forms.Label();
             this.laDate = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBoxOperation = new System.Windows.Forms.PictureBox();
-            this.btnOperation = new System.Windows.Forms.Button();
-            this.pictureBoxExit = new System.Windows.Forms.PictureBox();
-            this.pictureBoxIO = new System.Windows.Forms.PictureBox();
-            this.pictureBoxConfigure = new System.Windows.Forms.PictureBox();
-            this.pictureBoxRecipe = new System.Windows.Forms.PictureBox();
-            this.pictureBoxMain = new System.Windows.Forms.PictureBox();
-            this.btnMaintnance = new System.Windows.Forms.Button();
-            this.btnConfigure = new System.Windows.Forms.Button();
-            this.btnRecipe = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnIO = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btnMotorModule = new System.Windows.Forms.Button();
-            this.btnCH2Module = new System.Windows.Forms.Button();
-            this.btnCH1Module = new System.Windows.Forms.Button();
-            this.panelOption = new System.Windows.Forms.Panel();
-            this.checkBoxInterlockRelease = new System.Windows.Forms.CheckBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.HeaterInitTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEventLog)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserRegist)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panelOption.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToolHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOperation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxConfigure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMain)).BeginInit();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panelOption.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEventLog)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserRegist)).BeginInit();
             this.SuspendLayout();
             // 
             // timerDisplay
@@ -116,6 +119,369 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1005, 100);
             this.panel4.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panelLogo);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(276, 100);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(0, 924);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1280, 100);
+            this.panel9.TabIndex = 38;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(1194, 100);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(86, 824);
+            this.panel7.TabIndex = 40;
+            // 
+            // panelOption
+            // 
+            this.panelOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelOption.Controls.Add(this.checkBoxInterlockRelease);
+            this.panelOption.Location = new System.Drawing.Point(28, 106);
+            this.panelOption.Name = "panelOption";
+            this.panelOption.Size = new System.Drawing.Size(296, 132);
+            this.panelOption.TabIndex = 154;
+            this.panelOption.Visible = false;
+            // 
+            // checkBoxInterlockRelease
+            // 
+            this.checkBoxInterlockRelease.AutoSize = true;
+            this.checkBoxInterlockRelease.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxInterlockRelease.ForeColor = System.Drawing.Color.Navy;
+            this.checkBoxInterlockRelease.Location = new System.Drawing.Point(16, 19);
+            this.checkBoxInterlockRelease.Name = "checkBoxInterlockRelease";
+            this.checkBoxInterlockRelease.Size = new System.Drawing.Size(113, 25);
+            this.checkBoxInterlockRelease.TabIndex = 0;
+            this.checkBoxInterlockRelease.Text = "인터락 해제";
+            this.checkBoxInterlockRelease.UseVisualStyleBackColor = true;
+            this.checkBoxInterlockRelease.Click += new System.EventHandler(this.checkBoxInterlockRelease_Click);
+            // 
+            // HeaterInitTimer
+            // 
+            this.HeaterInitTimer.Interval = 5000;
+            this.HeaterInitTimer.Tick += new System.EventHandler(this.HeaterInitTimer_Tick);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
+            this.panel8.Controls.Add(this.btnMotorModule);
+            this.panel8.Controls.Add(this.btnCH2Module);
+            this.panel8.Controls.Add(this.btnCH1Module);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(86, 824);
+            this.panel8.TabIndex = 41;
+            // 
+            // btnMotorModule
+            // 
+            this.btnMotorModule.BackColor = System.Drawing.Color.Transparent;
+            this.btnMotorModule.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMotorModule.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMotorModule.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMotorModule.ForeColor = System.Drawing.Color.White;
+            this.btnMotorModule.Location = new System.Drawing.Point(14, 391);
+            this.btnMotorModule.Name = "btnMotorModule";
+            this.btnMotorModule.Size = new System.Drawing.Size(69, 50);
+            this.btnMotorModule.TabIndex = 8;
+            this.btnMotorModule.Text = "Motor";
+            this.btnMotorModule.UseVisualStyleBackColor = false;
+            this.btnMotorModule.Click += new System.EventHandler(this.btnModule_Click);
+            // 
+            // btnCH2Module
+            // 
+            this.btnCH2Module.BackColor = System.Drawing.Color.Transparent;
+            this.btnCH2Module.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCH2Module.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCH2Module.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCH2Module.ForeColor = System.Drawing.Color.White;
+            this.btnCH2Module.Location = new System.Drawing.Point(14, 335);
+            this.btnCH2Module.Name = "btnCH2Module";
+            this.btnCH2Module.Size = new System.Drawing.Size(69, 50);
+            this.btnCH2Module.TabIndex = 7;
+            this.btnCH2Module.Text = "CH2";
+            this.btnCH2Module.UseVisualStyleBackColor = false;
+            this.btnCH2Module.Click += new System.EventHandler(this.btnModule_Click);
+            // 
+            // btnCH1Module
+            // 
+            this.btnCH1Module.BackColor = System.Drawing.Color.Transparent;
+            this.btnCH1Module.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCH1Module.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCH1Module.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCH1Module.ForeColor = System.Drawing.Color.White;
+            this.btnCH1Module.Location = new System.Drawing.Point(14, 279);
+            this.btnCH1Module.Name = "btnCH1Module";
+            this.btnCH1Module.Size = new System.Drawing.Size(69, 50);
+            this.btnCH1Module.TabIndex = 6;
+            this.btnCH1Module.Text = "CH1";
+            this.btnCH1Module.UseVisualStyleBackColor = false;
+            this.btnCH1Module.Click += new System.EventHandler(this.btnModule_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(0, 100);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(22, 824);
+            this.panel6.TabIndex = 39;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
+            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel10.Controls.Add(this.pictureBoxToolHistory);
+            this.panel10.Controls.Add(this.btnToolHistory);
+            this.panel10.Controls.Add(this.pictureBoxOperation);
+            this.panel10.Controls.Add(this.btnOperation);
+            this.panel10.Controls.Add(this.pictureBoxExit);
+            this.panel10.Controls.Add(this.pictureBoxIO);
+            this.panel10.Controls.Add(this.pictureBoxConfigure);
+            this.panel10.Controls.Add(this.pictureBoxRecipe);
+            this.panel10.Controls.Add(this.pictureBoxMain);
+            this.panel10.Controls.Add(this.btnMaintnance);
+            this.panel10.Controls.Add(this.btnConfigure);
+            this.panel10.Controls.Add(this.btnRecipe);
+            this.panel10.Controls.Add(this.btnExit);
+            this.panel10.Controls.Add(this.btnIO);
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1286, 106);
+            this.panel10.TabIndex = 34;
+            // 
+            // pictureBoxToolHistory
+            // 
+            this.pictureBoxToolHistory.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxToolHistory.BackgroundImage = global::PKGSawKit_CleanerSystem_New_K4_3.Properties.Resources.History;
+            this.pictureBoxToolHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxToolHistory.Location = new System.Drawing.Point(866, 43);
+            this.pictureBoxToolHistory.Name = "pictureBoxToolHistory";
+            this.pictureBoxToolHistory.Size = new System.Drawing.Size(42, 42);
+            this.pictureBoxToolHistory.TabIndex = 46;
+            this.pictureBoxToolHistory.TabStop = false;
+            this.pictureBoxToolHistory.Click += new System.EventHandler(this.btnToolHistory_Click);
+            // 
+            // btnToolHistory
+            // 
+            this.btnToolHistory.BackColor = System.Drawing.Color.Transparent;
+            this.btnToolHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnToolHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnToolHistory.FlatAppearance.BorderSize = 0;
+            this.btnToolHistory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnToolHistory.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnToolHistory.ForeColor = System.Drawing.Color.White;
+            this.btnToolHistory.Location = new System.Drawing.Point(907, 43);
+            this.btnToolHistory.Name = "btnToolHistory";
+            this.btnToolHistory.Size = new System.Drawing.Size(100, 42);
+            this.btnToolHistory.TabIndex = 45;
+            this.btnToolHistory.Text = "Tool history";
+            this.btnToolHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnToolHistory.UseVisualStyleBackColor = false;
+            this.btnToolHistory.Click += new System.EventHandler(this.btnToolHistory_Click);
+            // 
+            // pictureBoxOperation
+            // 
+            this.pictureBoxOperation.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxOperation.BackgroundImage = global::PKGSawKit_CleanerSystem_New_K4_3.Properties.Resources.Operation;
+            this.pictureBoxOperation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxOperation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxOperation.Location = new System.Drawing.Point(131, 43);
+            this.pictureBoxOperation.Name = "pictureBoxOperation";
+            this.pictureBoxOperation.Size = new System.Drawing.Size(42, 42);
+            this.pictureBoxOperation.TabIndex = 41;
+            this.pictureBoxOperation.TabStop = false;
+            this.pictureBoxOperation.Click += new System.EventHandler(this.btnOperation_Click);
+            // 
+            // btnOperation
+            // 
+            this.btnOperation.BackColor = System.Drawing.Color.Transparent;
+            this.btnOperation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnOperation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOperation.FlatAppearance.BorderSize = 0;
+            this.btnOperation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOperation.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOperation.ForeColor = System.Drawing.Color.White;
+            this.btnOperation.Location = new System.Drawing.Point(172, 43);
+            this.btnOperation.Name = "btnOperation";
+            this.btnOperation.Size = new System.Drawing.Size(100, 42);
+            this.btnOperation.TabIndex = 40;
+            this.btnOperation.Text = "Operation";
+            this.btnOperation.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnOperation.UseVisualStyleBackColor = false;
+            this.btnOperation.Click += new System.EventHandler(this.btnOperation_Click);
+            // 
+            // pictureBoxExit
+            // 
+            this.pictureBoxExit.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxExit.BackgroundImage = global::PKGSawKit_CleanerSystem_New_K4_3.Properties.Resources.ExitButton;
+            this.pictureBoxExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxExit.Location = new System.Drawing.Point(1013, 43);
+            this.pictureBoxExit.Name = "pictureBoxExit";
+            this.pictureBoxExit.Size = new System.Drawing.Size(42, 42);
+            this.pictureBoxExit.TabIndex = 39;
+            this.pictureBoxExit.TabStop = false;
+            this.pictureBoxExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // pictureBoxIO
+            // 
+            this.pictureBoxIO.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxIO.BackgroundImage = global::PKGSawKit_CleanerSystem_New_K4_3.Properties.Resources.IOButton;
+            this.pictureBoxIO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxIO.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxIO.Location = new System.Drawing.Point(719, 43);
+            this.pictureBoxIO.Name = "pictureBoxIO";
+            this.pictureBoxIO.Size = new System.Drawing.Size(42, 42);
+            this.pictureBoxIO.TabIndex = 38;
+            this.pictureBoxIO.TabStop = false;
+            this.pictureBoxIO.Click += new System.EventHandler(this.btnIO_Click);
+            // 
+            // pictureBoxConfigure
+            // 
+            this.pictureBoxConfigure.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxConfigure.BackgroundImage = global::PKGSawKit_CleanerSystem_New_K4_3.Properties.Resources.ConfigButton;
+            this.pictureBoxConfigure.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxConfigure.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxConfigure.Location = new System.Drawing.Point(572, 43);
+            this.pictureBoxConfigure.Name = "pictureBoxConfigure";
+            this.pictureBoxConfigure.Size = new System.Drawing.Size(42, 42);
+            this.pictureBoxConfigure.TabIndex = 37;
+            this.pictureBoxConfigure.TabStop = false;
+            this.pictureBoxConfigure.Click += new System.EventHandler(this.btnConfigure_Click);
+            // 
+            // pictureBoxRecipe
+            // 
+            this.pictureBoxRecipe.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxRecipe.BackgroundImage = global::PKGSawKit_CleanerSystem_New_K4_3.Properties.Resources.RecipeButton;
+            this.pictureBoxRecipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxRecipe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxRecipe.Location = new System.Drawing.Point(425, 43);
+            this.pictureBoxRecipe.Name = "pictureBoxRecipe";
+            this.pictureBoxRecipe.Size = new System.Drawing.Size(42, 42);
+            this.pictureBoxRecipe.TabIndex = 36;
+            this.pictureBoxRecipe.TabStop = false;
+            this.pictureBoxRecipe.Click += new System.EventHandler(this.btnRecipe_Click);
+            // 
+            // pictureBoxMain
+            // 
+            this.pictureBoxMain.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxMain.BackgroundImage = global::PKGSawKit_CleanerSystem_New_K4_3.Properties.Resources.Maint;
+            this.pictureBoxMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxMain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxMain.Location = new System.Drawing.Point(278, 43);
+            this.pictureBoxMain.Name = "pictureBoxMain";
+            this.pictureBoxMain.Size = new System.Drawing.Size(42, 42);
+            this.pictureBoxMain.TabIndex = 35;
+            this.pictureBoxMain.TabStop = false;
+            this.pictureBoxMain.Click += new System.EventHandler(this.btnMain_Click);
+            // 
+            // btnMaintnance
+            // 
+            this.btnMaintnance.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaintnance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMaintnance.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaintnance.FlatAppearance.BorderSize = 0;
+            this.btnMaintnance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMaintnance.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaintnance.ForeColor = System.Drawing.Color.White;
+            this.btnMaintnance.Location = new System.Drawing.Point(319, 43);
+            this.btnMaintnance.Name = "btnMaintnance";
+            this.btnMaintnance.Size = new System.Drawing.Size(100, 42);
+            this.btnMaintnance.TabIndex = 33;
+            this.btnMaintnance.Text = "Maintnance";
+            this.btnMaintnance.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnMaintnance.UseVisualStyleBackColor = false;
+            this.btnMaintnance.Click += new System.EventHandler(this.btnMain_Click);
+            // 
+            // btnConfigure
+            // 
+            this.btnConfigure.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfigure.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfigure.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfigure.FlatAppearance.BorderSize = 0;
+            this.btnConfigure.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConfigure.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfigure.ForeColor = System.Drawing.Color.White;
+            this.btnConfigure.Location = new System.Drawing.Point(613, 43);
+            this.btnConfigure.Name = "btnConfigure";
+            this.btnConfigure.Size = new System.Drawing.Size(100, 42);
+            this.btnConfigure.TabIndex = 34;
+            this.btnConfigure.Text = "Configure";
+            this.btnConfigure.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnConfigure.UseVisualStyleBackColor = false;
+            this.btnConfigure.Click += new System.EventHandler(this.btnConfigure_Click);
+            // 
+            // btnRecipe
+            // 
+            this.btnRecipe.BackColor = System.Drawing.Color.Transparent;
+            this.btnRecipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRecipe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRecipe.FlatAppearance.BorderSize = 0;
+            this.btnRecipe.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRecipe.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecipe.ForeColor = System.Drawing.Color.White;
+            this.btnRecipe.Location = new System.Drawing.Point(466, 43);
+            this.btnRecipe.Name = "btnRecipe";
+            this.btnRecipe.Size = new System.Drawing.Size(100, 42);
+            this.btnRecipe.TabIndex = 32;
+            this.btnRecipe.Text = "Recipe";
+            this.btnRecipe.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRecipe.UseVisualStyleBackColor = false;
+            this.btnRecipe.Click += new System.EventHandler(this.btnRecipe_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(1054, 43);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(100, 42);
+            this.btnExit.TabIndex = 31;
+            this.btnExit.Text = "Exit";
+            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnIO
+            // 
+            this.btnIO.BackColor = System.Drawing.Color.Transparent;
+            this.btnIO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnIO.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIO.FlatAppearance.BorderSize = 0;
+            this.btnIO.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIO.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIO.ForeColor = System.Drawing.Color.White;
+            this.btnIO.Location = new System.Drawing.Point(760, 43);
+            this.btnIO.Name = "btnIO";
+            this.btnIO.Size = new System.Drawing.Size(100, 42);
+            this.btnIO.TabIndex = 20;
+            this.btnIO.Text = "In/Output";
+            this.btnIO.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnIO.UseVisualStyleBackColor = false;
+            this.btnIO.Click += new System.EventHandler(this.btnIO_Click);
             // 
             // panel5
             // 
@@ -328,14 +694,6 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.laDate.TabIndex = 147;
             this.laDate.Text = "0000.00.00";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panelLogo);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(276, 100);
-            this.panel2.TabIndex = 0;
-            // 
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(146)))), ((int)(((byte)(190)))));
@@ -347,329 +705,6 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.panelLogo.Size = new System.Drawing.Size(276, 100);
             this.panelLogo.TabIndex = 18;
             this.panelLogo.Click += new System.EventHandler(this.panelLogo_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 924);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1280, 100);
-            this.panel9.TabIndex = 38;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
-            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel10.Controls.Add(this.pictureBoxOperation);
-            this.panel10.Controls.Add(this.btnOperation);
-            this.panel10.Controls.Add(this.pictureBoxExit);
-            this.panel10.Controls.Add(this.pictureBoxIO);
-            this.panel10.Controls.Add(this.pictureBoxConfigure);
-            this.panel10.Controls.Add(this.pictureBoxRecipe);
-            this.panel10.Controls.Add(this.pictureBoxMain);
-            this.panel10.Controls.Add(this.btnMaintnance);
-            this.panel10.Controls.Add(this.btnConfigure);
-            this.panel10.Controls.Add(this.btnRecipe);
-            this.panel10.Controls.Add(this.btnExit);
-            this.panel10.Controls.Add(this.btnIO);
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1286, 106);
-            this.panel10.TabIndex = 34;
-            // 
-            // pictureBoxOperation
-            // 
-            this.pictureBoxOperation.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxOperation.BackgroundImage = global::PKGSawKit_CleanerSystem_New_K4_3.Properties.Resources.Operation;
-            this.pictureBoxOperation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxOperation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxOperation.Location = new System.Drawing.Point(172, 43);
-            this.pictureBoxOperation.Name = "pictureBoxOperation";
-            this.pictureBoxOperation.Size = new System.Drawing.Size(42, 42);
-            this.pictureBoxOperation.TabIndex = 41;
-            this.pictureBoxOperation.TabStop = false;
-            this.pictureBoxOperation.Click += new System.EventHandler(this.btnOperation_Click);
-            // 
-            // btnOperation
-            // 
-            this.btnOperation.BackColor = System.Drawing.Color.Transparent;
-            this.btnOperation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnOperation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOperation.FlatAppearance.BorderSize = 0;
-            this.btnOperation.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOperation.Font = new System.Drawing.Font("Nirmala UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOperation.ForeColor = System.Drawing.Color.White;
-            this.btnOperation.Location = new System.Drawing.Point(213, 43);
-            this.btnOperation.Name = "btnOperation";
-            this.btnOperation.Size = new System.Drawing.Size(111, 42);
-            this.btnOperation.TabIndex = 40;
-            this.btnOperation.Text = "Operation";
-            this.btnOperation.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnOperation.UseVisualStyleBackColor = false;
-            this.btnOperation.Click += new System.EventHandler(this.btnOperation_Click);
-            // 
-            // pictureBoxExit
-            // 
-            this.pictureBoxExit.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxExit.BackgroundImage = global::PKGSawKit_CleanerSystem_New_K4_3.Properties.Resources.ExitButton;
-            this.pictureBoxExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxExit.Location = new System.Drawing.Point(962, 43);
-            this.pictureBoxExit.Name = "pictureBoxExit";
-            this.pictureBoxExit.Size = new System.Drawing.Size(42, 42);
-            this.pictureBoxExit.TabIndex = 39;
-            this.pictureBoxExit.TabStop = false;
-            this.pictureBoxExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // pictureBoxIO
-            // 
-            this.pictureBoxIO.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxIO.BackgroundImage = global::PKGSawKit_CleanerSystem_New_K4_3.Properties.Resources.IOButton;
-            this.pictureBoxIO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxIO.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxIO.Location = new System.Drawing.Point(804, 43);
-            this.pictureBoxIO.Name = "pictureBoxIO";
-            this.pictureBoxIO.Size = new System.Drawing.Size(42, 42);
-            this.pictureBoxIO.TabIndex = 38;
-            this.pictureBoxIO.TabStop = false;
-            this.pictureBoxIO.Click += new System.EventHandler(this.btnIO_Click);
-            // 
-            // pictureBoxConfigure
-            // 
-            this.pictureBoxConfigure.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxConfigure.BackgroundImage = global::PKGSawKit_CleanerSystem_New_K4_3.Properties.Resources.ConfigButton;
-            this.pictureBoxConfigure.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxConfigure.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxConfigure.Location = new System.Drawing.Point(646, 43);
-            this.pictureBoxConfigure.Name = "pictureBoxConfigure";
-            this.pictureBoxConfigure.Size = new System.Drawing.Size(42, 42);
-            this.pictureBoxConfigure.TabIndex = 37;
-            this.pictureBoxConfigure.TabStop = false;
-            this.pictureBoxConfigure.Click += new System.EventHandler(this.btnConfigure_Click);
-            // 
-            // pictureBoxRecipe
-            // 
-            this.pictureBoxRecipe.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxRecipe.BackgroundImage = global::PKGSawKit_CleanerSystem_New_K4_3.Properties.Resources.RecipeButton;
-            this.pictureBoxRecipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxRecipe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxRecipe.Location = new System.Drawing.Point(488, 43);
-            this.pictureBoxRecipe.Name = "pictureBoxRecipe";
-            this.pictureBoxRecipe.Size = new System.Drawing.Size(42, 42);
-            this.pictureBoxRecipe.TabIndex = 36;
-            this.pictureBoxRecipe.TabStop = false;
-            this.pictureBoxRecipe.Click += new System.EventHandler(this.btnRecipe_Click);
-            // 
-            // pictureBoxMain
-            // 
-            this.pictureBoxMain.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxMain.BackgroundImage = global::PKGSawKit_CleanerSystem_New_K4_3.Properties.Resources.Maint;
-            this.pictureBoxMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxMain.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxMain.Location = new System.Drawing.Point(330, 43);
-            this.pictureBoxMain.Name = "pictureBoxMain";
-            this.pictureBoxMain.Size = new System.Drawing.Size(42, 42);
-            this.pictureBoxMain.TabIndex = 35;
-            this.pictureBoxMain.TabStop = false;
-            this.pictureBoxMain.Click += new System.EventHandler(this.btnMain_Click);
-            // 
-            // btnMaintnance
-            // 
-            this.btnMaintnance.BackColor = System.Drawing.Color.Transparent;
-            this.btnMaintnance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMaintnance.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaintnance.FlatAppearance.BorderSize = 0;
-            this.btnMaintnance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMaintnance.Font = new System.Drawing.Font("Nirmala UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaintnance.ForeColor = System.Drawing.Color.White;
-            this.btnMaintnance.Location = new System.Drawing.Point(371, 43);
-            this.btnMaintnance.Name = "btnMaintnance";
-            this.btnMaintnance.Size = new System.Drawing.Size(111, 42);
-            this.btnMaintnance.TabIndex = 33;
-            this.btnMaintnance.Text = "Maintnance";
-            this.btnMaintnance.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnMaintnance.UseVisualStyleBackColor = false;
-            this.btnMaintnance.Click += new System.EventHandler(this.btnMain_Click);
-            // 
-            // btnConfigure
-            // 
-            this.btnConfigure.BackColor = System.Drawing.Color.Transparent;
-            this.btnConfigure.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnConfigure.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfigure.FlatAppearance.BorderSize = 0;
-            this.btnConfigure.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConfigure.Font = new System.Drawing.Font("Nirmala UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfigure.ForeColor = System.Drawing.Color.White;
-            this.btnConfigure.Location = new System.Drawing.Point(687, 43);
-            this.btnConfigure.Name = "btnConfigure";
-            this.btnConfigure.Size = new System.Drawing.Size(111, 42);
-            this.btnConfigure.TabIndex = 34;
-            this.btnConfigure.Text = "Configure";
-            this.btnConfigure.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnConfigure.UseVisualStyleBackColor = false;
-            this.btnConfigure.Click += new System.EventHandler(this.btnConfigure_Click);
-            // 
-            // btnRecipe
-            // 
-            this.btnRecipe.BackColor = System.Drawing.Color.Transparent;
-            this.btnRecipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRecipe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRecipe.FlatAppearance.BorderSize = 0;
-            this.btnRecipe.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRecipe.Font = new System.Drawing.Font("Nirmala UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecipe.ForeColor = System.Drawing.Color.White;
-            this.btnRecipe.Location = new System.Drawing.Point(529, 43);
-            this.btnRecipe.Name = "btnRecipe";
-            this.btnRecipe.Size = new System.Drawing.Size(111, 42);
-            this.btnRecipe.TabIndex = 32;
-            this.btnRecipe.Text = "Recipe";
-            this.btnRecipe.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnRecipe.UseVisualStyleBackColor = false;
-            this.btnRecipe.Click += new System.EventHandler(this.btnRecipe_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExit.Font = new System.Drawing.Font("Nirmala UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(1003, 43);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(111, 42);
-            this.btnExit.TabIndex = 31;
-            this.btnExit.Text = "Exit";
-            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnIO
-            // 
-            this.btnIO.BackColor = System.Drawing.Color.Transparent;
-            this.btnIO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnIO.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIO.FlatAppearance.BorderSize = 0;
-            this.btnIO.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIO.Font = new System.Drawing.Font("Nirmala UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIO.ForeColor = System.Drawing.Color.White;
-            this.btnIO.Location = new System.Drawing.Point(845, 43);
-            this.btnIO.Name = "btnIO";
-            this.btnIO.Size = new System.Drawing.Size(111, 42);
-            this.btnIO.TabIndex = 20;
-            this.btnIO.Text = "In/Output";
-            this.btnIO.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnIO.UseVisualStyleBackColor = false;
-            this.btnIO.Click += new System.EventHandler(this.btnIO_Click);
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(1194, 100);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(86, 824);
-            this.panel7.TabIndex = 40;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
-            this.panel8.Controls.Add(this.btnMotorModule);
-            this.panel8.Controls.Add(this.btnCH2Module);
-            this.panel8.Controls.Add(this.btnCH1Module);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(86, 824);
-            this.panel8.TabIndex = 41;
-            // 
-            // btnMotorModule
-            // 
-            this.btnMotorModule.BackColor = System.Drawing.Color.Transparent;
-            this.btnMotorModule.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMotorModule.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMotorModule.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMotorModule.ForeColor = System.Drawing.Color.White;
-            this.btnMotorModule.Location = new System.Drawing.Point(14, 391);
-            this.btnMotorModule.Name = "btnMotorModule";
-            this.btnMotorModule.Size = new System.Drawing.Size(69, 50);
-            this.btnMotorModule.TabIndex = 8;
-            this.btnMotorModule.Text = "Motor";
-            this.btnMotorModule.UseVisualStyleBackColor = false;
-            this.btnMotorModule.Click += new System.EventHandler(this.btnModule_Click);
-            // 
-            // btnCH2Module
-            // 
-            this.btnCH2Module.BackColor = System.Drawing.Color.Transparent;
-            this.btnCH2Module.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCH2Module.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCH2Module.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCH2Module.ForeColor = System.Drawing.Color.White;
-            this.btnCH2Module.Location = new System.Drawing.Point(14, 335);
-            this.btnCH2Module.Name = "btnCH2Module";
-            this.btnCH2Module.Size = new System.Drawing.Size(69, 50);
-            this.btnCH2Module.TabIndex = 7;
-            this.btnCH2Module.Text = "CH2";
-            this.btnCH2Module.UseVisualStyleBackColor = false;
-            this.btnCH2Module.Click += new System.EventHandler(this.btnModule_Click);
-            // 
-            // btnCH1Module
-            // 
-            this.btnCH1Module.BackColor = System.Drawing.Color.Transparent;
-            this.btnCH1Module.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCH1Module.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCH1Module.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCH1Module.ForeColor = System.Drawing.Color.White;
-            this.btnCH1Module.Location = new System.Drawing.Point(14, 279);
-            this.btnCH1Module.Name = "btnCH1Module";
-            this.btnCH1Module.Size = new System.Drawing.Size(69, 50);
-            this.btnCH1Module.TabIndex = 6;
-            this.btnCH1Module.Text = "CH1";
-            this.btnCH1Module.UseVisualStyleBackColor = false;
-            this.btnCH1Module.Click += new System.EventHandler(this.btnModule_Click);
-            // 
-            // panelOption
-            // 
-            this.panelOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panelOption.Controls.Add(this.checkBoxInterlockRelease);
-            this.panelOption.Location = new System.Drawing.Point(28, 106);
-            this.panelOption.Name = "panelOption";
-            this.panelOption.Size = new System.Drawing.Size(296, 132);
-            this.panelOption.TabIndex = 154;
-            this.panelOption.Visible = false;
-            // 
-            // checkBoxInterlockRelease
-            // 
-            this.checkBoxInterlockRelease.AutoSize = true;
-            this.checkBoxInterlockRelease.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxInterlockRelease.ForeColor = System.Drawing.Color.Navy;
-            this.checkBoxInterlockRelease.Location = new System.Drawing.Point(16, 19);
-            this.checkBoxInterlockRelease.Name = "checkBoxInterlockRelease";
-            this.checkBoxInterlockRelease.Size = new System.Drawing.Size(113, 25);
-            this.checkBoxInterlockRelease.TabIndex = 0;
-            this.checkBoxInterlockRelease.Text = "인터락 해제";
-            this.checkBoxInterlockRelease.UseVisualStyleBackColor = true;
-            this.checkBoxInterlockRelease.Click += new System.EventHandler(this.checkBoxInterlockRelease_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(0, 100);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(22, 824);
-            this.panel6.TabIndex = 39;
-            // 
-            // HeaterInitTimer
-            // 
-            this.HeaterInitTimer.Interval = 5000;
-            this.HeaterInitTimer.Tick += new System.EventHandler(this.HeaterInitTimer_Tick);
             // 
             // MainForm
             // 
@@ -692,25 +727,26 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEventLog)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserRegist)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panelOption.ResumeLayout(false);
+            this.panelOption.PerformLayout();
+            this.panel8.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxToolHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOperation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxConfigure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecipe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMain)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panelOption.ResumeLayout(false);
-            this.panelOption.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlarm2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEventLog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserRegist)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -758,5 +794,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         private System.Windows.Forms.PictureBox pictureBoxAlarm2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer HeaterInitTimer;
+        private System.Windows.Forms.PictureBox pictureBoxToolHistory;
+        private System.Windows.Forms.Button btnToolHistory;
     }
 }

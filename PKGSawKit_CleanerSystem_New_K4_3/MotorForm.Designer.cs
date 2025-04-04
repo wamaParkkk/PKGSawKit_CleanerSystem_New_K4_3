@@ -31,7 +31,6 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         {
             this.groupBoxAxis0 = new System.Windows.Forms.GroupBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.textBoxAxis0GearSet = new System.Windows.Forms.TextBox();
             this.textBoxAxis0GearCur = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
@@ -66,6 +65,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.ImgAxis0 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBoxAxis0.SuspendLayout();
             this.ImgAxis0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -74,8 +74,8 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             // 
             // groupBoxAxis0
             // 
-            this.groupBoxAxis0.Controls.Add(this.label35);
             this.groupBoxAxis0.Controls.Add(this.label11);
+            this.groupBoxAxis0.Controls.Add(this.label35);
             this.groupBoxAxis0.Controls.Add(this.textBoxAxis0GearSet);
             this.groupBoxAxis0.Controls.Add(this.textBoxAxis0GearCur);
             this.groupBoxAxis0.Controls.Add(this.label32);
@@ -126,18 +126,6 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.label35.Size = new System.Drawing.Size(41, 17);
             this.label35.TabIndex = 301;
             this.label35.Text = "Pulse";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(303, 225);
-            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 17);
-            this.label11.TabIndex = 300;
-            this.label11.Text = "Unit/Sec";
             // 
             // textBoxAxis0GearSet
             // 
@@ -602,6 +590,18 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(303, 217);
+            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(70, 30);
+            this.label11.TabIndex = 302;
+            this.label11.Text = "Unit/Sec\r\n(Max:3000)";
+            // 
             // MotorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -657,7 +657,7 @@ namespace PKGSawKit_CleanerSystem_New_K4_3
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label11;
     }
 }
